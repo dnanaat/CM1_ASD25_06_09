@@ -17,11 +17,7 @@ public class Barang {
         this.harga= harga;
     }
 
-    void tampilDataTransaksi(){
-        System.out.println("Kode Barang : " + kodeBarang);
-        System.out.println("Nama        : " + nama);
-        System.out.println("Kategori    : " + kategori);
-        System.out.println("Stock       : " + stock);
-        System.out.println("Harga       : " + harga);
+    void tampilDataBarang(){
+        System.out.printf("%-20s %-20s %-20s %-20s %-20s\n", kodeBarang, nama, kategori, stock, harga);
     }
 }
