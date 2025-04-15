@@ -16,7 +16,7 @@ public class MainSistemProject {
         TransaksiPembelian tr4 = new TransaksiPembelian("Tr004", "MeiMei", "21-04-2024", 1, brg4);
         TransaksiPembelian tr5 = new TransaksiPembelian("Tr005", "Ihsan", "21-04-2024", 1, brg5);
 
-        ServiceClass serviceClass = new ServiceClass();
+        ServiceClass serviceClass = new ServiceClass(5);
         serviceClass.tambahDataTransaksi(tr1);
         serviceClass.tambahDataTransaksi(tr2);
         serviceClass.tambahDataTransaksi(tr3);
@@ -33,25 +33,26 @@ public class MainSistemProject {
             System.out.println("5. Exit");
             System.out.print("Masukkan pilihan menu : ");
             int menu = sc.nextInt();
+            sc.nextLine();
 
             if (menu == 1) {
-                
+                serviceClass.tampilBarang();
             }
 
             else if (menu == 2) {
-                
+                serviceClass.tampilTransaksi();
             }
 
             else if (menu == 3) {
-                
+                serviceClass.cariBarangNama(sc);
             }
 
             else if (menu == 4) {
-                
+                serviceClass.urutkanBarangBerdasarkanNama();
             }
 
             else if (menu == 5) {
-                
+                break;
             }
 
             else {
